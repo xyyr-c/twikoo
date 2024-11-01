@@ -173,7 +173,7 @@ module.exports = async (request, response) => {
 function allowCors (request, response) {
   if (request.headers.origin) {
     response.setHeader('Access-Control-Allow-Credentials', true)
-    response.setHeader('Access-Control-Allow-Origin', getAllowedOrigin(request))
+    response.setHeader('Access-Control-Allow-Origin', '*')
     response.setHeader('Access-Control-Allow-Methods', 'POST')
     response.setHeader(
       'Access-Control-Allow-Headers',
