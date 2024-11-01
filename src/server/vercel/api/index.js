@@ -184,6 +184,7 @@ function allowCors (request, response) {
 }
 
 function getAllowedOrigin (request) {
+  return request.headers.origin
   const localhostRegex = /^https?:\/\/(localhost|127\.0\.0\.1|0\.0\.0\.0)(:\d{1,5})?$/
   if (localhostRegex.test(request.headers.origin)) { // 判断是否为本地主机，如是则允许跨域
     return request.headers.origin // Allow
